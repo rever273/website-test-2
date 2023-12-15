@@ -575,11 +575,9 @@
     // Return the disObj of a given element if it has one
     function getDisObj(el) {
 
-        console.log('xx', el)
         let matchedDisObj = undefined;
         dises.forEach(disObj => {
 
-            console.log('disObjx', disObj)
             if (disObj.elem === el) {
                 matchedDisObj = disObj;
             }
@@ -619,7 +617,6 @@
     let firstTime = true;
     function init() {
         disElems = document.querySelectorAll("[data-dis-type]"); //'simultaneous' //
-        console.log('css1', disElems)
         dises = [];
         numCanvasesLoaded = 0;
 

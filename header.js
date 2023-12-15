@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
+
+    console.log('xcxczxcz', globalBasePath)
     var header = `
         <header>
             <a href="index.html">
