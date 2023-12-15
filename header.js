@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     console.log('xcxczxcz', globalBasePath)
     var header = `
         <header>
-            <a href="index.html">
+            <a href="${globalBasePath}index.html">
                 <img src="${globalBasePath}images/logo.png" alt="M Logo">
             </a>
 
