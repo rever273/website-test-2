@@ -1,26 +1,23 @@
 document.addEventListener('DOMContentLoaded', function () {
-
-    console.log('xcxczxcz', globalBasePath)
     var header = `
         <header>
             <a href="${globalBasePath}index.html">
-                <img src="${globalBasePath}images/logo.png" alt="M Logo">
+                <img src="${globalBasePath}images/logo1.png" alt="M Logo">
             </a>
 
             <nav>
                 <ul>
                     <li><a href="${globalBasePath}index.html">Main</a></li>
                     <li class="dropdown">
-                        <a href="javascript:void(0)" class="dropbtn">Characters</a>
+                        <a href="javascript:void(0)" class="dropbtn">About</a>
                         <div class="dropdown-content">
-                            <a href="${globalBasePath}pages/loki.html">Loki</a>
-                            <a href="${globalBasePath}pages/rocket.html">Rocket</a>
-                            <a href="${globalBasePath}pages/scarlet-witch.html">Scarlet Witch</a>
-                            <a href="${globalBasePath}pages/deadpool.html">Deadpool</a>
-                            <a href="${globalBasePath}pages/korg.html">Korg</a>
+                            <a href="${globalBasePath}pages/distribution.html">Distribution</a>
+                            <a href="${globalBasePath}pages/anatomy.html">Anatomy</a>
+                            <a href="${globalBasePath}pages/size.html">Size</a>
+                            <a href="${globalBasePath}pages/adaptations.html">Adaptations</a>
+                            <a href="${globalBasePath}pages/reproduction.html">Reproduction</a>
                         </div>
                     </li>
-                    <li><a href="${globalBasePath}pages/contact.html">Contact Us</a></li>
                 </ul>
             </nav>
         </header>
