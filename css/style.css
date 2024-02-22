@@ -120,7 +120,6 @@ html {
     margin-bottom: 0.5rem;
 }
 
-
 .cta-section {
     position: relative;
     text-align: center;
@@ -190,8 +189,8 @@ html {
 
 #boring-text {
     padding: 60px;
-    margin-left: 350px;
-    margin-right: 350px;
+    margin-left: 20%;
+    margin-right: 20%;
     /* width: 900px; */
     /* text-align: center; */
     font-size: 150%;
