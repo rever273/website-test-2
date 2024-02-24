@@ -4,78 +4,184 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Demon Slayer: Kimetsu no Yaiba</title>
-
-    <link rel="stylesheet" href="css/style.css">
-
+    <title>IceCup - Delicious Ice Cream</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Happy+Monkey&family=Noto+Sans+Mono:wght@100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <header>
-        <div class="logo">
-            <img src="images/logo.png" alt="Demon Slayer Logo">
-        </div>
-        <h1>zx Demon Slayer: Kimetsu no Yaiba</h1>
+    <header class="header-container">
+        <img src="images/logo.png" alt="IceCup Logo" id="logo">
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="pages/about.html#about">About</a></li>
+                <li><a href="pages/contact.html#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
-    <section id="about">
-        <h2>About Demon Slayer: Kimetsu no Yaiba</h2>
-        <br>
-        <p>In Taisho-era Japan, Tanjiro Kamado is a kindhearted boy who makes a living selling charcoal. However, his
-            peaceful life is shattered when a Demon slaughters his entire family. His little sister Nezuko is the only
-            survivor, but she has been transformed into a Demon herself! Tanjiro sets out on a dangerous journey to find
-            a way to return his sister to normal and destroy the Demon who ruined his life.</p>
-    </section>
-    <section id="characters">
-        <div class="container">
-            <div class="character" id="tanjiro">
-                <h3>Kamado Tanjiro</h3>
-                <img src="images/tanjiro.jpg" alt="Kamado Tanjiro">
-                <p>Tanjiro Kamado is the main protagonist of Demon Slayer: Kimetsu no Yaiba. He is a Demon Slayer in the
-                    Demon Slayer Corps, who joined to find a remedy to turn his sister, Nezuko Kamado, back into a human
-                    and to hunt down and kill demons, and later swore to defeat Muzan Kibutsuji, the King of Demons, in
-                    order to prevent others from suffering the same fate as him.</p>
+
+    <div id="home" class="home-section">
+        <h1>Welcome to IceCup!</h1>
+    </div>
+
+    <br>
+    <div class="welcome-text">
+        <h2>Chill your day with a cup of IceCup!</h2>
+        <p>Welcome to the world of IceCup, where every scoop is a journey of flavor! Dive into our delightful variety of
+            ice creams that are crafted to perfection with love and joy. Whether you're looking for a classic treat or
+            an adventurous taste, our carefully selected ingredients and unique combinations will satisfy your cravings.
+            Indulge in the ultimate ice cream experience and make your moments sweeter with IceCup!</p>
+    </div>
+    <br>
+    <div id="menu" class="home-section">
+        <div class="flavor-row">
+            <div class="flavor" id="vanilla">
+                <div class="image-container">
+                    <img src="images/vanilla.png" alt="Vanilla Dream" class="ice-cream-image">
+                </div>
+                <div class="text-container">
+                    <h3 class="flavor-name">Vanilla Dream</h3>
+                    <p class="topping">Toppings: Rainbow Sprinkles, Whipped Cream</p>
+                    <p class="price">$4.00 AUD</p>
+                </div>
             </div>
-            <div class="character" id="nezuko">
-                <h3>Nezuko Kamado</h3>
-                <img src="images/nezuko.jpg" alt="Nezuko Kamado">
-                <p>Nezuko Kamado is the deuteragonist of Demon Slayer: Kimetsu no Yaiba. She is a demon and the younger
-                    sister of Tanjiro Kamado and one of the two remaining members of the Kamado family. Formerly a
-                    human, she was attacked and transformed into a demon by Muzan Kibutsuji.</p>
+
+            <div class="flavor" id="chocolate">
+                <div class="image-container">
+                    <img src="images/chocolate.png" alt="Chocolate Heaven" class="ice-cream-image">
+                </div>
+                <div class="text-container">
+                    <h3 class="flavor-name">Chocolate Heaven</h3>
+                    <p class="topping">Toppings: Chocolate Chips, Marshmallows</p>
+                    <p class="price">$4.50 AUD</p>
+                </div>
             </div>
-            <div class="character" id="mitsuri">
-                <h3>Mitsuri Kanroji</h3>
-                <img src="images/mitsuri.jpg" alt="Mitsuri Kanroji">
-                <p>Mitsuri Kanroji is a major supporting character of Demon Slayer: Kimetsu no Yaiba. She is a Demon
-                    Slayer of the Demon Slayer Corps and the current Love Hashira</p>
+
+            <div class="flavor" id="strawberry">
+                <div class="image-container">
+                    <img src="images/strawberry.png" alt="Strawberry Blast" class="ice-cream-image">
+                </div>
+                <div class="text-container">
+                    <h3 class="flavor-name">Strawberry Blast</h3>
+                    <p class="topping">Fresh Strawberries, Chocolate Syrup</p>
+                    <p class="price">$4.50 AUD</p>
+                </div>
             </div>
-            <div class="character" id="muichiro">
-                <h3>Muichiro Tokito</h3>
-                <img src="images/muichiro.jpg" alt="Muichiro Tokito">
-                <p>Muichiro Tokito is a major supporting character of Demon Slayer: Kimetsu no Yaiba. He is a Demon
-                    Slayer of the Demon Slayer Corps and the current Mist Hashira.</p>
-            </div>
-            <div class="character" id="genya">
-                <h3>Genya Shinazugawa</h3>
-                <img src="images/genya.jpg" alt="Genya Shinazugawa">
-                <p>Genya Shinazugawa is a major supporting character of Demon Slayer: Kimetsu no Yaiba. He is a Demon
-                    Slayer in the Demon Slayer Corps and the younger brother of the Wind Hashira, Sanemi Shinazugawa</p>
-            </div>
-            <div class="character" id="kotetsu">
-                <h3>Kotetsu</h3>
-                <img src="images/kotetsu.jpg" alt="Kotetsu">
-                <p>Kotetsu is a supporting character in Demon Slayer: Kimetsu No Yaiba. He is a young villager from the
-                    Swordsmith Village. His ancestors built the battle doll Yoriichi Type Zero.</p>
+
+            <div class="flavor" id="banana">
+                <div class="image-container">
+                    <img src="images/banana.png" alt="Sunny Banana" class="ice-cream-image">
+                </div>
+                <div class="text-container">
+                    <h3 class="flavor-name">Sunny Banana</h3>
+                    <p class="topping">Toppings: Sliced Bananas, Honey Drizzle</p>
+                    <p class="price">$4.00 AUD</p>
+                </div>
             </div>
         </div>
-    </section>
+        <div class="flavor-row">
+
+            <div class="flavor" id="pistachio">
+                <div class="image-container">
+                    <img src="images/pistachio.png" alt="Pistachio Power" class="ice-cream-image">
+                </div>
+                <div class="text-container">
+                    <h3 class="flavor-name">Pistachio Power</h3>
+                    <p class="topping">Toppings: Crushed Nuts, Pistachio Pieces</p>
+                    <p class="price">$5.00 AUD</p>
+                </div>
+            </div>
+
+            <div class="flavor" id="coffee">
+                <div class="image-container">
+                    <img src="images/coffee.png" alt="Coffee Craze" class="ice-cream-image">
+                </div>
+                <div class="text-container">
+                    <h3 class="flavor-name">Coffee Craze</h3>
+                    <p class="topping">Toppings: Caramel Swirl, Chocolate Beans</p>
+                    <p class="price">$4.50 AUD</p>
+                </div>
+            </div>
+
+            <div class="flavor" id="lemon">
+                <div class="image-container">
+                    <img src="images/lemon.png" alt="Lemon Lush" class="ice-cream-image">
+                </div>
+                <div class="text-container">
+                    <h3 class="flavor-name">Lemon Lush</h3>
+                    <p class="topping">Toppings: Lemon Zest, Sugar Crystals</p>
+                    <p class="price">$4.00 AUD</p>
+                </div>
+            </div>
+
+            <div class="flavor" id="sweetpink">
+                <div class="image-container">
+                    <img src="images/sweetpink.png" alt="Sweet Pink Strawberry" class="ice-cream-image">
+                </div>
+                <div class="text-container">
+                    <h3 class="flavor-name">Sweet Pink Strawberry</h3>
+                    <p class="topping">Toppings: Strawberry Syrup, Pink Sugar</p>
+                    <p class="price">$4.50 AUD</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="flavor-row">
+
+            <div class="flavor" id="mint">
+                <div class="image-container">
+                    <img src="images/mint.png" alt="Mint Magic" class="ice-cream-image">
+                </div>
+                <div class="text-container">
+                    <h3 class="flavor-name">Mint Magic</h3>
+                    <p class="topping">Toppings: Chocolate Syrup, Mint Leaves</p>
+                    <p class="price">$4.00 AUD</p>
+                </div>
+            </div>
+
+            <div class="flavor" id="bitter_almond">
+                <div class="image-container">
+                    <img src="images/bitter_almond.png" alt="Bitter Almond" class="ice-cream-image">
+                </div>
+                <div class="text-container">
+                    <h3 class="flavor-name">Bitter Almond</h3>
+                    <p class="topping">Toppings: Roasted Almonds, Dark Chocolate Shavings</p>
+                    <p class="price">$5.00 AUD</p>
+                </div>
+            </div>
+
+            <div class="flavor" id="spicy_chili">
+                <div class="image-container">
+                    <img src="images/spicy_chili.png" alt="Spicy Chili" class="ice-cream-image">
+                </div>
+                <div class="text-container">
+                    <h3 class="flavor-name">Spicy Chili</h3>
+                    <p class="topping">Toppings: Chili Flakes, Dark Chocolate</p>
+                    <p class="price">$6.00 AUD</p>
+                </div>
+            </div>
+
+            <div class="flavor" id="blueberry">
+                <div class="image-container">
+                    <img src="images/blueberry.png" alt="Bubble Blueberry" class="ice-cream-image">
+                </div>
+                <div class="text-container">
+                    <h3 class="flavor-name">Bubble Blueberry</h3>
+                    <p class="topping">Toppings: Blueberry Compote, Gummy Bears</p>
+                    <p class="price">$4.50 AUD</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <footer>
-        <a href="https://www.crunchyroll.com/series/GY5P48XEY/demon-slayer-kimetsu-no-yaiba">The Anime</a>
-        <a href="https://kimetsu-no-yaiba.fandom.com/wiki/Kimetsu_no_Yaiba_Wiki">Fansite Wiki</a>
-        <a href="https://en.wikipedia.org/wiki/Demon_Slayer:_Kimetsu_no_Yaiba">Wikipedia</a>
+        <p>&copy; 2024 IceCup. All rights reserved.</p>
     </footer>
 </body>
 

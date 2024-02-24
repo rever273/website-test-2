@@ -1,109 +1,177 @@
 body {
-    background: url('/images/bg.jpg') no-repeat center center fixed;
-    background-size: cover;
     font-family: 'Happy Monkey', sans-serif;
-    color: #333;
-    line-height: 1.6;
-    padding: 0;
-    margin: 0;
-}
-
-body::before {
-    content: '';
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(255, 255, 255, 0.8);
-    z-index: -1;
-}
-
-header {
-    background-color: #333;
-    padding: 1rem;
+    /* background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet); */
+    background: linear-gradient(to right, red, yellow, green, blue, violet);
     text-align: center;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+    /* Устанавливаем высоту для html и body, чтобы они занимали весь экран */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    /* Контент будет организован в колонку */
+}
+
+.content-container {
+    flex: 1;
+    /* Элемент будет растягиваться и занимать все доступное пространство */
+    /* Этот контейнер должен обернуть все содержимое, кроме футера */
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to right, #eb2020 0%, #c70ba8 100%);
+    padding: 0.8em 1em;
     color: white;
 }
 
-.logo img {
-    max-width: 150px;
+header img#logo {
+    width: 130px;
     height: auto;
 }
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    margin: 0;
+    /* Сброс отступов */
+}
+
+nav ul li {
+    padding: 0 1em;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.4em;
+}
+
 
 h1 {
-    font-size: 3em;
-    color: #FFF;
-    margin: 0.1em 0;
+    font-size: 5em;
+    margin-bottom: 0.5em;
+    text-shadow: 2px 2px 4px black;
 }
 
-/* .character p {
-    font-size: 1.5em;
-    color: #555;
-} */
-
-
-#about,
-#characters {
-    padding: 3rem;
-    text-align: center;
-    font-size: 1.8em;
-    /* background: beige; */
-}
-
-#characters .container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 1rem;
-    row-gap: 1rem;
-    column-gap: 1rem;
-    padding: 2rem;
-    background-color: #839c80;
-}
-
-.character {
-    border: 1px solid #ddd;
-    padding: 3rem;
-    background-color: #fff;
-    text-align: center;
-}
-
-.character img {
-    max-width: 60%;
-    height: auto;
-    border: 4px solid #18790f;
-    margin-bottom: 1rem;
-}
-
-.character p {
-    font-size: 1em;
-    color: #555;
-}
-
-@media (max-width: 600px) {
-    #characters .container {
-        grid-template-columns: 1fr;
-    }
-}
-
-header,
-footer {
-    background: linear-gradient(to right, #000000, #4d4d4d);
+.welcome-text {
+    width: 70%;
+    margin: 0 auto;
     color: white;
-    padding: 1rem;
+    text-shadow: 2px 2px 4px black;
     text-align: center;
-    position: relative;
-    z-index: 1;
+    font-size: 200%;
+    padding: 2em 0;
 }
 
-footer a {
-    color: #03a727;
-    margin: 0 8rem;
-    text-decoration: none;
-    font-size: 1.8em;
+.flavor-row {
+    display: flex;
+    justify-content: center;
+    margin: 3em auto;
 }
 
-footer a:hover {
-    text-decoration: underline;
+.flavor {
+    width: 200px;
+    height: auto;
+    /* Высота будет определяться содержимым */
+    margin: 0 2em;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    /* Установить направление содержимого в колонку */
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    background-color: white;
+    /* Цвет фона */
+}
+
+.image-container {
+    display: flex;
+    /* Для центрирования изображения */
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    /* Обрезать изображение относительно border-radius */
+    border-top-left-radius: 70px;
+    /* Закругленные углы сверху для картинки */
+    border-top-right-radius: 70px;
+}
+
+.ice-cream-image {
+    max-width: 100%;
+    /* Адаптирует изображение к размеру .image-container */
+    height: auto;
+    display: block;
+    /* Устраняет пространство под элементом inline */
+}
+
+.text-container {
+    padding: 1em;
+    /* Отступы для текстовой информации */
+}
+
+.flavor-name {
+    font-size: 24px;
+    color: black;
+    text-shadow: none;
+    margin: 0.5em 0;
+}
+
+.topping,
+.price {
+    font-size: 18px;
+    color: black;
+    text-shadow: none;
+    margin: 0.5em 0;
+}
+
+.flavor:hover {
+    transform: scale(1.05);
+}
+
+#vanilla,
+#strawberry,
+#sweetpink,
+#lemon {
+    background-color: #f5a9b8;
+}
+
+#chocolate,
+#coffee,
+#mint,
+#pistachio {
+    background-color: #a38671;
+}
+
+#banana,
+#bitter_almond,
+#spicy_chili {
+    background-color: #f5e79e;
+}
+
+#bitter_almond,
+#blueberry,
+#spicy_chili {
+    background-color: #8e44ad;
+}
+
+footer {
+    background-color: #333;
+    padding: 0.2em 0;
+    font-size: 1.3em;
+    text-align: center;
+    width: 100%;
 }
