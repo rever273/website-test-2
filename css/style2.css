@@ -124,3 +124,22 @@ section {
 #contactForm button:hover {
     background-color: #444;
 }
+
+/* TOP3 */
+.flavor-page-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.flavor-story {
+    font-size: 140%;
+}
+
+.flavor-image {
+    width: 50%;
+    /* или другой размер */
+    border-radius: 10px;
+    margin: 20px 0;
+}
