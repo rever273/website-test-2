@@ -1,201 +1,435 @@
 body {
-    background: url('images/bg.jpg') no-repeat center center fixed;
-    background-size: cover;
     font-family: 'Happy Monkey', sans-serif;
-    color: #333;
-    line-height: 1.6;
-    padding: 0;
+    /* background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet); */
+    background: linear-gradient(to right, red, yellow, green, blue, violet);
+    background-size: cover;
+    text-align: center;
+    color: white;
     margin: 0;
+    padding: 0;
 }
 
-body::before {
-    content: '';
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(255, 255, 255, 0.8);
-    z-index: -1;
-}
-
-header {
-    background-color: #333;
-    padding: 1rem;
-    text-align: center;
-    color: white;
-}
-
-.logo img {
-    max-width: 150px;
-    height: auto;
-}
-
-h1 {
-    font-size: 3em;
-    color: #FFF;
-    margin: 0.1em 0;
-}
-
-#about {
-    padding: 3rem;
-    text-align: center;
-    font-size: 1.8em;
-}
-
-#characters {
-    padding: 3rem 0;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-}
-
-#characters .container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-items: center;
-    max-width: 70%;
-    margin: auto;
-    gap: 1rem;
-}
-
-.character:nth-child(2),
-.character:nth-child(4),
-.character:nth-child(6) {
-    transform: scale(1);
-    /* Размер остается прежним */
-}
-
-.character:nth-child(1),
-.character:nth-child(3),
-.character:nth-child(5) {
-    transform: scale(0.8);
-    /* Уменьшение размера до 80% */
-}
-
-
-.character {
-    cursor: pointer;
-}
-
-.character img {
-    width: 100%;
-    object-fit: cover;
-}
-
-.character:hover img {
-    transform: scale(1.05);
-}
-
-.character-description {
-    display: none;
-}
-
-/* modal window */
-
-.modal {
-    display: none;
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
+html,
+body {
     height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    z-index: 2;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
 }
 
-.modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 40%;
-    z-index: 3;
-}
-
-.modal-content img {
-    max-width: 500px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 70%;
-}
-
-.modal-content .character-description {
-    display: block;
-}
-
-.modal-content .character-description p {
-    font-size: 200%;
-}
-
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-}
-
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-
-/* button_back */
-/* a.back-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #FF69B4;
-    color: #FFFFFF;
-    text-decoration: none;
-    border: 3px solid #FFFFFF;
-    border-radius: 5px;
-    font-family: 'Arial', sans-serif;
-    font-size: 16px;
-    font-weight: bold;
-    transition: transform 0.3s, background-color 0.3s;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-a.back-button:hover {
-    transform: translateY(-3px);
-    background-color: #FF82AB;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-} */
-
-
-@media (max-width: 768px) {
-    #characters .container {
-        grid-template-columns: 1fr;
-        max-width: 90%;
-    }
-
-    .character {
-        transform: none;
-    }
-}
-
-
-header,
-footer {
-    background: linear-gradient(to right, #000000, #4d4d4d);
-    color: white;
-    padding: 1rem;
-    text-align: center;
+.dropdown {
     position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
 
-footer a {
-    color: #03a727;
-    margin: 0 8rem;
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
     text-decoration: none;
-    font-size: 1.8em;
+    display: block;
 }
 
-footer a:hover {
-    text-decoration: underline;
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #c92492;
+}
+
+/* контент */
+.content-container {
+    flex: 1;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to right, #eb2020 0%, #c70ba8 100%);
+    padding: 0.8em 1em;
+    color: white;
+}
+
+header img#logo {
+    width: 130px;
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    margin: 0;
+}
+
+nav ul li {
+    padding: 0 1em;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.4em;
+}
+
+h1 {
+    font-size: 5em;
+    margin-bottom: 0.5em;
+    text-shadow: 2px 2px 4px black;
+}
+
+.welcome-text {
+    width: 70%;
+    margin: 0 auto;
+    color: white;
+    text-shadow: 2px 2px 4px black;
+    text-align: center;
+    font-size: 200%;
+    padding: 1em 0;
+}
+
+.flavor-row {
+    display: flex;
+    justify-content: center;
+    margin: 3em auto;
+}
+
+.flavor {
+    width: 200px;
+    height: auto;
+    margin: 0 2em;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    background-color: white;
+}
+
+.image-container {
+    display: flex;
+    /* Для центрирования изображения */
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-top-left-radius: 70px;
+    border-top-right-radius: 70px;
+}
+
+.ice-cream-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.ice-wallpaper-image {
+    max-width: 50%;
+    height: auto;
+    display: block;
+    border-radius: 15px;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.text-container {
+    padding: 1em;
+}
+
+.flavor-name {
+    font-size: 24px;
+    color: black;
+    text-shadow: none;
+    margin: 0.5em 0;
+}
+
+.topping,
+.price {
+    font-size: 18px;
+    color: black;
+    text-shadow: none;
+    margin: 0.5em 0;
+}
+
+.flavor:hover {
+    transform: scale(1.05);
+}
+
+#vanilla,
+#strawberry,
+#sweetpink,
+#lemon {
+    background-color: #f5a9b8;
+}
+
+#chocolate,
+#coffee,
+#mint,
+#pistachio {
+    background-color: #a38671;
+}
+
+#banana,
+#bitter_almond,
+#spicy_chili {
+    background-color: #f5e79e;
+}
+
+#bitter_almond,
+#blueberry,
+#spicy_chili {
+    background-color: #8e44ad;
+}
+
+footer {
+    background-color: #333;
+    padding: 0.2em 0;
+    font-size: 1.3em;
+    text-align: center;
+    width: 100%;
+}
+
+.about-container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background: rgb(0, 0, 0);
+    border-radius: 10px;
+    box-shadow: 0 5px 25px rgba(155, 155, 155, 0.603);
+}
+
+.welcome-message-background {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    padding: 20px;
+    display: inline-block;
+    margin-top: 20px;
+    box-sizing: border-box;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+.about-2 {
+    font-size: 150%;
+}
+
+.team-photo {
+    width: 90%;
+    border-radius: 5%;
+    margin: 10px;
+}
+
+.about-team {
+    font-size: 150%;
+}
+
+.team-members {
+    display: flex;
+    justify-content: space-around;
+    color: black;
+}
+
+.team-member {
+    width: 30%;
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Страница Контакты */
+
+.shop {
+    width: 60%;
+    border-radius: 5%;
+    margin: 10px;
+}
+
+.contact-container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    color: black;
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+}
+
+.contact-container2 {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    color: black;
+    font-size: 150%;
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+}
+
+.contact-info,
+.contact-form {
+    margin-bottom: 20px;
+}
+
+.social-media-links a {
+    display: inline-block;
+    margin-right: 10px;
+    text-decoration: none;
+    color: #333;
+    background: #f4f4f4;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.social-media-links a:hover {
+    background: #ddd;
+}
+
+#contactForm {
+    display: flex;
+    flex-direction: column;
+}
+
+#contactForm label {
+    margin-top: 10px;
+}
+
+#contactForm input,
+#contactForm textarea {
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#contactForm button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#contactForm button:hover {
+    background-color: #444;
+}
+
+/* TOP3 */
+.flavor-page-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.20);
+    border-radius: 15px;
+    padding: 20px;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+.flavor-story {
+    font-size: 140%;
+}
+
+.flavor-image {
+    width: 50%;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+/* mobile */
+@media (max-width: 480px) {
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        position: absolute;
+        background: #333;
+        top: 60px;
+        left: 0;
+    }
+
+    #menu-toggle:checked~ul {
+        display: flex;
+    }
+
+    .menu-btn {
+        cursor: pointer;
+        display: block;
+        width: 35px;
+        height: 25px;
+        position: relative;
+        margin: 10px 20px;
+    }
+
+    .menu-btn:before,
+    .menu-btn:after,
+    .menu-btn div {
+        background-color: #fff;
+        position: absolute;
+        height: 3px;
+        width: 100%;
+        transition: all 0.3s;
+        content: '';
+    }
+
+    .menu-btn:before {
+        top: 0;
+    }
+
+    .menu-btn:after {
+        bottom: 0;
+    }
+
+    .menu-btn div {
+        top: 11px;
+    }
+
+    .menu-btn div {
+        display: none;
+    }
+
+    .menu-btn {
+        display: flex;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    .home-section,
+    .welcome-text {
+        font-size: 150%;
+    }
+
+    .flavor {
+        width: 100%;
+        margin: 1em 0;
+    }
+
+    .flavor-row {
+        flex-direction: column;
+    }
 }

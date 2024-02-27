@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IceCup - Delicious Ice Cream</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Happy+Monkey&family=Noto+Sans+Mono:wght@100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header class="header-container">
+        <img src="../images/logo.png" alt="IceCup Logo" id="logo">
+        <nav>
+            <input type="checkbox" id="menu-toggle" style="display: none;" />
+            <label for="menu-toggle" class="menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li class="dropdown">
+                    <a href="#top3">Top 3</a>
+                    <div class="dropdown-content">
+                        <a href="banana.html">Sunny Banana</a>
+                        <a href="sweetpink.html">Sweet Pink Strawberry</a>
+                        <a href="blueberry.html">Bubble Blueberry</a>
+                    </div>
+                </li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="menu" class="home-section">
+        <div class="flavor-row">
+            <div class="flavor" id="vanilla">
+                <div class="image-container">
+                    <img src="../images/vanilla.png" alt="Vanilla Dream" class="ice-cream-image">
+                </div>
+                <div class="text-container">
+                    <h3 class="flavor-name">Vanilla Dream</h3>
+                    <p class="topping">Toppings: Rainbow Sprinkles, Whipped Cream</p>
+                    <p class="price">$4.00 AUD</p>
+                </div>
+            </div>
+
+            <div class="flavor" id="chocolate">
+                <div class="image-container">
+                    <img src="../images/chocolate.png" alt="Chocolate Heaven" class="ice-cream-image">
+                </div>
+                <div class="text-container">
+                    <h3 class="flavor-name">Chocolate Heaven</h3>
+                    <p class="topping">Toppings: Chocolate Chips, Marshmallows</p>
+                    <p class="price">$4.50 AUD</p>
+                </div>
+            </div>
+
+            <div class="flavor" id="strawberry">
+                <div class="image-container">
+                    <img src="../images/strawberry.png" alt="Strawberry Blast" class="ice-cream-image">
+                </div>
+                <div class="text-container">
+                    <h3 class="flavor-name">Strawberry Blast</h3>
+                    <p class="topping">Fresh Strawberries, Chocolate Syrup</p>
+                    <p class="price">$4.50 AUD</p>
+                </div>
+            </div>
+
+            <div class="flavor" id="banana">
+                <div class="image-container">
+                    <img src="../images/banana.png" alt="Sunny Banana" class="ice-cream-image">
+                </div>
+                <div class="text-container">
+                    <h3 class="flavor-name">Sunny Banana</h3>
+                    <p class="topping">Toppings: Sliced Bananas, Honey Drizzle</p>
+                    <p class="price">$4.00 AUD</p>
+                </div>
+            </div>
+        </div>
+        <div class="flavor-row">
+
+            <div class="flavor" id="pistachio">
+                <div class="image-container">
+                    <img src="../images/pistachio.png" alt="Pistachio Power" class="ice-cream-image">
+                </div>
+                <div class="text-container">
+                    <h3 class="flavor-name">Pistachio Power</h3>
+                    <p class="topping">Toppings: Crushed Nuts, Pistachio Pieces</p>
+                    <p class="price">$5.00 AUD</p>
+                </div>
+            </div>
+
+            <div class="flavor" id="coffee">
+                <div class="image-container">
+                    <img src="../images/coffee.png" alt="Coffee Craze" class="ice-cream-image">
+                </div>
+                <div class="text-container">
+                    <h3 class="flavor-name">Coffee Craze</h3>
+                    <p class="topping">Toppings: Caramel Swirl, Chocolate Beans</p>
+                    <p class="price">$4.50 AUD</p>
+                </div>
+            </div>
+
+            <div class="flavor" id="lemon">
+                <div class="image-container">
+                    <img src="../images/lemon.png" alt="Lemon Lush" class="ice-cream-image">
+                </div>
+                <div class="text-container">
+                    <h3 class="flavor-name">Lemon Lush</h3>
+                    <p class="topping">Toppings: Lemon Zest, Sugar Crystals</p>
+                    <p class="price">$4.00 AUD</p>
+                </div>
+            </div>
+
+            <div class="flavor" id="sweetpink">
+                <div class="image-container">
+                    <img src="../images/sweetpink.png" alt="Sweet Pink Strawberry" class="ice-cream-image">
+                </div>
+                <div class="text-container">
+                    <h3 class="flavor-name">Sweet Pink Strawberry</h3>
+                    <p class="topping">Toppings: Strawberry Syrup, Pink Sugar</p>
+                    <p class="price">$4.50 AUD</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="flavor-row">
+
+            <div class="flavor" id="mint">
+                <div class="image-container">
+                    <img src="../images/mint.png" alt="Mint Magic" class="ice-cream-image">
+                </div>
+                <div class="text-container">
+                    <h3 class="flavor-name">Mint Magic</h3>
+                    <p class="topping">Toppings: Chocolate Syrup, Mint Leaves</p>
+                    <p class="price">$4.00 AUD</p>
+                </div>
+            </div>
+
+            <div class="flavor" id="bitter_almond">
+                <div class="image-container">
+                    <img src="../images/bitter_almond.png" alt="Bitter Almond" class="ice-cream-image">
+                </div>
+                <div class="text-container">
+                    <h3 class="flavor-name">Bitter Almond</h3>
+                    <p class="topping">Toppings: Roasted Almonds, Dark Chocolate Shavings</p>
+                    <p class="price">$5.00 AUD</p>
+                </div>
+            </div>
+
+            <div class="flavor" id="spicy_chili">
+                <div class="image-container">
+                    <img src="../images/spicy_chili.png" alt="Spicy Chili" class="ice-cream-image">
+                </div>
+                <div class="text-container">
+                    <h3 class="flavor-name">Spicy Chili</h3>
+                    <p class="topping">Toppings: Chili Flakes, Dark Chocolate</p>
+                    <p class="price">$6.00 AUD</p>
+                </div>
+            </div>
+
+            <div class="flavor" id="blueberry">
+                <div class="image-container">
+                    <img src="../images/blueberry.png" alt="Bubble Blueberry" class="ice-cream-image">
+                </div>
+                <div class="text-container">
+                    <h3 class="flavor-name">Bubble Blueberry</h3>
+                    <p class="topping">Toppings: Blueberry Compote, Gummy Bears</p>
+                    <p class="price">$4.50 AUD</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 IceCup. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
