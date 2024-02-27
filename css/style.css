@@ -1,208 +1,201 @@
 body {
+    background: url('images/bg.jpg') no-repeat center center fixed;
+    background-size: cover;
     font-family: 'Happy Monkey', sans-serif;
-    /* background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet); */
-    background: linear-gradient(to right, red, yellow, green, blue, violet);
+    color: #333;
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
+}
+
+body::before {
+    content: '';
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.8);
+    z-index: -1;
+}
+
+header {
+    background-color: #333;
+    padding: 1rem;
     text-align: center;
     color: white;
-    margin: 0;
-    padding: 0;
 }
 
-html,
-body {
-    height: 100%;
-    /* Устанавливаем высоту для html и body, чтобы они занимали весь экран */
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    /* Контент будет организован в колонку */
-}
-
-/* выпадающее меню */
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-.dropdown-content a:hover {
-    background-color: #c92492;
-}
-
-/* контент */
-.content-container {
-    flex: 1;
-    /* Элемент будет растягиваться и занимать все доступное пространство */
-    /* Этот контейнер должен обернуть все содержимое, кроме футера */
-}
-
-.header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: linear-gradient(to right, #eb2020 0%, #c70ba8 100%);
-    padding: 0.8em 1em;
-    color: white;
-}
-
-header img#logo {
-    width: 130px;
+.logo img {
+    max-width: 150px;
     height: auto;
 }
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    margin: 0;
-    /* Сброс отступов */
-}
-
-nav ul li {
-    padding: 0 1em;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    font-size: 1.4em;
-}
-
 
 h1 {
-    font-size: 5em;
-    margin-bottom: 0.5em;
-    text-shadow: 2px 2px 4px black;
+    font-size: 3em;
+    color: #FFF;
+    margin: 0.1em 0;
 }
 
-.welcome-text {
-    width: 70%;
-    margin: 0 auto;
-    color: white;
-    text-shadow: 2px 2px 4px black;
+#about {
+    padding: 3rem;
     text-align: center;
-    font-size: 200%;
-    padding: 2em 0;
+    font-size: 1.8em;
 }
 
-.flavor-row {
+#characters {
+    padding: 3rem 0;
+    text-align: center;
     display: flex;
     justify-content: center;
-    margin: 3em auto;
 }
 
-.flavor {
-    width: 200px;
-    height: auto;
-    /* Высота будет определяться содержимым */
-    margin: 0 2em;
-    border-radius: 40px;
-    display: flex;
-    flex-direction: column;
-    /* Установить направление содержимого в колонку */
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
-    background-color: white;
-    /* Цвет фона */
+#characters .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    max-width: 70%;
+    margin: auto;
+    gap: 1rem;
 }
 
-.image-container {
-    display: flex;
-    /* Для центрирования изображения */
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    /* Обрезать изображение относительно border-radius */
-    border-top-left-radius: 70px;
-    /* Закругленные углы сверху для картинки */
-    border-top-right-radius: 70px;
+.character:nth-child(2),
+.character:nth-child(4),
+.character:nth-child(6) {
+    transform: scale(1);
+    /* Размер остается прежним */
 }
 
-.ice-cream-image {
-    max-width: 100%;
-    /* Адаптирует изображение к размеру .image-container */
-    height: auto;
-    display: block;
-    /* Устраняет пространство под элементом inline */
+.character:nth-child(1),
+.character:nth-child(3),
+.character:nth-child(5) {
+    transform: scale(0.8);
+    /* Уменьшение размера до 80% */
 }
 
-.text-container {
-    padding: 1em;
-    /* Отступы для текстовой информации */
+
+.character {
+    cursor: pointer;
 }
 
-.flavor-name {
-    font-size: 24px;
-    color: black;
-    text-shadow: none;
-    margin: 0.5em 0;
+.character img {
+    width: 100%;
+    object-fit: cover;
 }
 
-.topping,
-.price {
-    font-size: 18px;
-    color: black;
-    text-shadow: none;
-    margin: 0.5em 0;
-}
-
-.flavor:hover {
+.character:hover img {
     transform: scale(1.05);
 }
 
-#vanilla,
-#strawberry,
-#sweetpink,
-#lemon {
-    background-color: #f5a9b8;
+.character-description {
+    display: none;
 }
 
-#chocolate,
-#coffee,
-#mint,
-#pistachio {
-    background-color: #a38671;
-}
+/* modal window */
 
-#banana,
-#bitter_almond,
-#spicy_chili {
-    background-color: #f5e79e;
-}
-
-#bitter_almond,
-#blueberry,
-#spicy_chili {
-    background-color: #8e44ad;
-}
-
-footer {
-    background-color: #333;
-    padding: 0.2em 0;
-    font-size: 1.3em;
-    text-align: center;
+.modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
     width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+    z-index: 3;
+}
+
+.modal-content img {
+    max-width: 500px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+
+.modal-content .character-description {
+    display: block;
+}
+
+.modal-content .character-description p {
+    font-size: 200%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* button_back */
+/* a.back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #FF69B4;
+    color: #FFFFFF;
+    text-decoration: none;
+    border: 3px solid #FFFFFF;
+    border-radius: 5px;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    transition: transform 0.3s, background-color 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+a.back-button:hover {
+    transform: translateY(-3px);
+    background-color: #FF82AB;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+} */
+
+
+@media (max-width: 768px) {
+    #characters .container {
+        grid-template-columns: 1fr;
+        max-width: 90%;
+    }
+
+    .character {
+        transform: none;
+    }
+}
+
+
+header,
+footer {
+    background: linear-gradient(to right, #000000, #4d4d4d);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+footer a {
+    color: #03a727;
+    margin: 0 8rem;
+    text-decoration: none;
+    font-size: 1.8em;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
